@@ -9,6 +9,9 @@
 ### 2. <a href='https://jeondoh.github.io/interactive-site/panorama/' target='_blank'>panorama</a>
 - 3D 파노라마 웹페이지
 
+### 3. <a href='https://jeondoh.github.io/interactive-site/moviebox/' target='_blank'>moviebox</a>
+- Flex 레이아웃을 활용한 웹 모션
+
 ### 출처 
 - https://fastcampus.co.kr/dev_online_webmotion
 - 최성일의 코딩 초급자를 위한 웹 모션 디자인
