@@ -15,6 +15,8 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
+    position: relative;
+    z-index: 3;
 
     h1 {
       color: #fff;
@@ -45,11 +47,14 @@ main {
     height: 100%;
     padding-top: 10vh;
     display: flex;
+    position: relative;
+    z-index: 1;
 
     article {
       flex: 1;
       position: relative;
       transition: 0.5s;
+      cursor: pointer;
 
       &::before {
         content: "";
@@ -73,6 +78,33 @@ main {
         flex-wrap: wrap;
         align-content: space-between;
         padding: 50px 30px 100px;
+
+        .txt {
+          padding-top: 90px;
+          transition: 1s;
+
+          h2 {
+            font: normal 2vw/1 "Alegreya Sans SC";
+            color: #fff;
+            margin-bottom: 40px;
+            transition: 1s;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 40px;
+              height: 2px;
+              background: #777;
+              margin-top: 20px;
+              transition: 1.5s;
+            }
+          }
+
+          p {
+            font: 14px/1.4 "arial";
+            color: #777;
+          }
+        }
 
         figure {
           width: 100%;
@@ -101,6 +133,18 @@ main {
         }
 
         .inner {
+          .txt {
+            padding-top: 20px;
+
+            h2 {
+              font-size: 5vw;
+
+              &::after {
+                width: 120px;
+                background: orange;
+              }
+            }
+          }
           figure {
             height: 25vh;
             top: 25px;
@@ -125,6 +169,58 @@ main {
           color: #bbb;
         }
       }
+    }
+  }
+
+  aside {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    padding: 5vw;
+    padding-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: 1s;
+
+    &.on {
+      opacity: 1;
+      left: 0;
+    }
+
+    .txtBox {
+      width: 20%;
+
+      h2 {
+        font: normal 120px/1 "alegreya sans SC";
+        color: #ddd;
+        margin-bottom: 30px;
+      }
+      p {
+        font: 18px/1.2 "arial";
+        color: #777;
+      }
+    }
+    .vidBox {
+      width: 72%;
+      padding-top: 150px;
+
+      video {
+        width: 100%;
+      }
+    }
+
+    .btnClose {
+      position: absolute;
+      top: 150px;
+      right: 5vw;
+      font: 16px/1 "arial";
+      color: orange;
+      cursor: pointer;
     }
   }
 }
